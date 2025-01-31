@@ -1,0 +1,34 @@
+@media only screen and (max-width: 600px) {
+    
+    body {
+        overflow: hidden;
+        user-select: none;
+    }
+
+    .game-sec {
+        width: 95%;
+    }
+
+    .user-side, .bot-side {
+        & img {
+            width: 150px;
+            height: 150px;
+            margin-top: 35px;
+            pointer-events: none;
+        }
+    }
+
+    .user-choice {
+        & img {
+            width: 85px;
+            height: 85px;
+            margin-top: 10px;
+        }
+    }
+
+    .result-sec {
+        text-align: center;
+    }
+
+
+  }
