@@ -32,15 +32,25 @@ function userImageShow() {
             }
 
             // POP UP CODE HERE
-            if(computerPoint >= 10 && userPoint < 10 || computerPoint < 10 && userPoint >= 10) {
+            let winStats = document.querySelector('.win-stats')
+            if(computerPoint >= 10 && userPoint < 10) {
                 popUp.style.display = 'block';
+                winStats.textContent = 'You Lose The Match 😒';
+            }else if (computerPoint < 10 && userPoint >= 10) {
+                popUp.style.display = 'block';
+                winStats.textContent = 'You Won The Match 😍';
             }else {
                 popUp.style.display = 'none';
             }
             // PLAY AGAIN BUTTON CODE HERE
             playAgain.addEventListener('click', ()=> {
                 popUp.style.display = 'none';
-                window.location.reload();
+                // window.location.reload();
+                gameStatus.textContent = '';
+                userPoint = 0;
+                computerPoint = 0;
+                userScore.textContent = userPoint;
+                computerScore.textContent = computerPoint;
             })
         });
     });
@@ -50,7 +60,7 @@ function userImageShow() {
 
 userImageShow();
 
-
+// LOADER CODE HERE
 let loader = document.querySelector('.loader');
 let box = document.querySelector('.box');
 let load = document.querySelector('.load');
@@ -68,4 +78,4 @@ function counter() {
     }, 30);
 }
 
-window.onload = counter()
+window.onload = counter();
