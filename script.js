@@ -46,4 +46,26 @@ function userImageShow() {
     });
 }
 
+
+
 userImageShow();
+
+
+let loader = document.querySelector('.loader');
+let box = document.querySelector('.box');
+let load = document.querySelector('.load');
+let per = document.querySelector('.per');
+
+function counter() {
+    let count = 0;
+    let interval = setInterval(() => {
+        count++;
+        per.textContent = count;
+        if (count === 100) {
+            clearInterval(interval);
+            loader.style.display = 'none';
+        }
+    }, 30);
+}
+
+window.onload = counter()
