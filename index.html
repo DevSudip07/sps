@@ -19,37 +19,40 @@
         </div>
     </div>
 
-    <div class="game-sec">
-        <h1>Game Info</h1>
-        <hr />
-        <div class="game-info">
-            <div class="user-side">
-                <h2>You</h2>
-                <hr />
-                <img class="user-img" src="img/image.png" alt="" />
-            </div>
-            <div class="bot-side">
-                <h2>Bot</h2>
-                <hr />
-                <img class="bot-img" src="img/image.png" alt="" />
-            </div>
+
+    <header>
+        <nav>
+            <h1>Hello <span class="user-name"></span> !</h1>
+        </nav>
+        <div class="game-status">
+                <h3>Your Points : <span class="user-score">0</span></h3>
+                <h3>Bot's Points : <span class="bot-score">0</span></h3>
+                <h3 class="status">Start The Game</h3>
         </div>
-        <div class="user-choice">
-            <img class="img" src="./img/1.jpg" alt="" />
-            <img class="img" src="./img/2.jpg" alt="" />
-            <img class="img" src="./img/3.jpg" alt="" />
+    </header>   
+
+    <main>
+        <div class="choices">
+            <h2>Your Choice</h2>
+            <img class="user-img" src="./img/image.png" alt="">
         </div>
-        <div class="result-sec">
-            <h3>Bot : <span class="bot-score">0</span></h3>
-            <h3>You : <span class="user-score">0</span></h3>
-            <h3>Status : <span class="status"></span></h3>
+        <div class="choices">
+            <h2>Bot's Choice</h2>
+            <img class="bot-img" src="./img/image.png" alt="">
         </div>
+    </main>
+
+    <footer>
+        <button><img class="img" src="./img/1.jpg" alt=""></button>
+        <button><img class="img" src="./img/2.jpg" alt=""></button>
+        <button><img class="img" src="./img/3.jpg" alt=""></button>
+    </footer>
+
         <div class="pop-up">
             <h2>Game Over!</h2>
             <h1 class="win-stats"></h1>
             <button class="again-btn">Play Again</button>
         </div>
-    </div>
 
     <!-- ======== JS FILE ======== -->
     <script src="script.js"></script>

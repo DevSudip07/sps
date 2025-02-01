@@ -1,34 +1,91 @@
 @media only screen and (max-width: 600px) {
-    
+
     body {
         overflow: hidden;
         user-select: none;
     }
 
-    .game-sec {
-        width: 95%;
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    h1 {
+        /* For iOS */
+        -webkit-tap-highlight-color: transparent;
+        /* For Android */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        /* To remove focus outline */
+        outline: none;
     }
 
-    .user-side, .bot-side {
-        & img {
-            width: 150px;
-            height: 150px;
-            margin-top: 35px;
-            pointer-events: none;
+    nav {
+        height: 60px;
+
+        & h1 {
+            font-size: 35px;
         }
     }
 
-    .user-choice {
-        & img {
-            width: 85px;
-            height: 85px;
-            margin-top: 10px;
+    .game-status {
+        width: 90%;
+
+        & h3 {
+            font-size: 20px;
         }
     }
 
-    .result-sec {
-        text-align: center;
+    main {
+        width: 90%;
+        gap: 10px;
+
+        & .choices {
+            width: 200px;
+            height: 200px;
+
+            & img {
+                width: 145px;
+                height: 145px;
+            }
+        }
     }
 
 
-  }
+    footer {
+        width: 90%;
+        height: 80px;
+
+        & button {
+            width: 70px;
+            height: 70px;
+            border: none;
+        }
+
+        & button:hover {
+            width: 80px;
+            height: 80px;
+            margin-top: -50px;
+            outline: 8px solid #00002F;
+            transition: .3s all ease-in;
+        }
+    }
+
+
+
+    .pop-up {
+        width: 90%;
+
+        & h2 {
+            font-size: 20px;
+        }
+
+        & h1 {
+            font-size: 25px;
+            margin: 15px 0px;
+        }
+    }
+
+
+
+
+}

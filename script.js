@@ -22,23 +22,26 @@ function userImageShow() {
             if(userIndex == computerIndex) {
                 gameStatus.textContent = "It's a tie!";
             }else if (userIndex == 1 && computerIndex == 2 || userIndex == 2 && computerIndex == 3 || userIndex == 3 && computerIndex == 1) {
-                gameStatus.textContent = 'You Win !'
+                gameStatus.textContent = 'You Win 😍'
                 userPoint++;
                 userScore.textContent = userPoint;
             }else {
-                gameStatus.textContent = 'You Lose !'
+                gameStatus.textContent = 'You Lose 😒'
                 computerPoint++;
                 computerScore.textContent = computerPoint;
             }
 
             // POP UP CODE HERE
-            let winStats = document.querySelector('.win-stats')
+            let options = document.querySelector('footer');
+            let winStats = document.querySelector('.win-stats');
             if(computerPoint >= 10 && userPoint < 10) {
                 popUp.style.display = 'block';
-                winStats.textContent = 'You Lose The Match 😒';
+                winStats.textContent = 'You Lose The Race 😒';
+                options.style.marginTop = '200px'; // FOR FOOTER ANIMATION
             }else if (computerPoint < 10 && userPoint >= 10) {
                 popUp.style.display = 'block';
-                winStats.textContent = 'You Won The Match 😍';
+                winStats.textContent = 'You Won The Race 😍';
+                options.style.marginTop = '200px'; // FOR FOOTER ANIMATION
             }else {
                 popUp.style.display = 'none';
             }
@@ -46,11 +49,12 @@ function userImageShow() {
             playAgain.addEventListener('click', ()=> {
                 popUp.style.display = 'none';
                 // window.location.reload();
-                gameStatus.textContent = '';
+                gameStatus.textContent = 'Start The Game';
                 userPoint = 0;
                 computerPoint = 0;
                 userScore.textContent = userPoint;
                 computerScore.textContent = computerPoint;
+                options.style.marginTop = '50px'; // FOR FOOTER ANIMATION
             })
         });
     });
@@ -65,6 +69,7 @@ let loader = document.querySelector('.loader');
 let box = document.querySelector('.box');
 let load = document.querySelector('.load');
 let per = document.querySelector('.per');
+let userName = document.querySelector('.user-name');
 
 function counter() {
     let count = 0;
@@ -74,6 +79,8 @@ function counter() {
         if (count === 100) {
             clearInterval(interval);
             loader.style.display = 'none';
+            let getUserName = prompt('Please Enter User Name 🙏');
+            userName.textContent = getUserName;
         }
     }, 30);
 }
