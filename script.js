@@ -80,7 +80,11 @@ function counter() {
             clearInterval(interval);
             loader.style.display = 'none';
             let getUserName = prompt('Please Enter User Name 🙏');
-            userName.textContent = getUserName;
+            if(getUserName === null) {
+                userName.textContent = 'Champ'
+            }else {
+                userName.textContent = getUserName;
+            }
         }
     }, 30);
 }
